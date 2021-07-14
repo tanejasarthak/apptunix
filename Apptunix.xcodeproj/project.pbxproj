@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		45BF63AB269F1F48005CCB56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63AA269F1F48005CCB56 /* AppDelegate.swift */; };
 		45BF63AD269F1F48005CCB56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63AC269F1F48005CCB56 /* SceneDelegate.swift */; };
-		45BF63AF269F1F48005CCB56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63AE269F1F48005CCB56 /* ViewController.swift */; };
 		45BF63B2269F1F48005CCB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45BF63B0269F1F48005CCB56 /* Main.storyboard */; };
 		45BF63B4269F1F4A005CCB56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BF63B3269F1F4A005CCB56 /* Assets.xcassets */; };
 		45BF63B7269F1F4A005CCB56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45BF63B5269F1F4A005CCB56 /* LaunchScreen.storyboard */; };
 		45BF63C2269F1F4A005CCB56 /* ApptunixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63C1269F1F4A005CCB56 /* ApptunixTests.swift */; };
 		45BF63CD269F1F4A005CCB56 /* ApptunixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63CC269F1F4A005CCB56 /* ApptunixUITests.swift */; };
+		45BF63E2269F32A0005CCB56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63E1269F32A0005CCB56 /* LoginViewController.swift */; };
+		45BF63E7269F32B6005CCB56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63E6269F32B6005CCB56 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 		45BF63A7269F1F48005CCB56 /* Apptunix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apptunix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BF63AA269F1F48005CCB56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45BF63AC269F1F48005CCB56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		45BF63AE269F1F48005CCB56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		45BF63B1269F1F48005CCB56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45BF63B3269F1F4A005CCB56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45BF63B6269F1F4A005CCB56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		45BF63C8269F1F4A005CCB56 /* ApptunixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApptunixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BF63CC269F1F4A005CCB56 /* ApptunixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptunixUITests.swift; sourceTree = "<group>"; };
 		45BF63CE269F1F4A005CCB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45BF63E1269F32A0005CCB56 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		45BF63E6269F32B6005CCB56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		45BF63A9269F1F48005CCB56 /* Apptunix */ = {
 			isa = PBXGroup;
 			children = (
+				45BF63E0269F328E005CCB56 /* Views */,
 				45BF63AA269F1F48005CCB56 /* AppDelegate.swift */,
 				45BF63AC269F1F48005CCB56 /* SceneDelegate.swift */,
-				45BF63AE269F1F48005CCB56 /* ViewController.swift */,
 				45BF63B0269F1F48005CCB56 /* Main.storyboard */,
 				45BF63B3269F1F4A005CCB56 /* Assets.xcassets */,
 				45BF63B5269F1F4A005CCB56 /* LaunchScreen.storyboard */,
@@ -126,6 +128,15 @@
 				45BF63CE269F1F4A005CCB56 /* Info.plist */,
 			);
 			path = ApptunixUITests;
+			sourceTree = "<group>";
+		};
+		45BF63E0269F328E005CCB56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45BF63E1269F32A0005CCB56 /* LoginViewController.swift */,
+				45BF63E6269F32B6005CCB56 /* SignupViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45BF63AF269F1F48005CCB56 /* ViewController.swift in Sources */,
+				45BF63E2269F32A0005CCB56 /* LoginViewController.swift in Sources */,
 				45BF63AB269F1F48005CCB56 /* AppDelegate.swift in Sources */,
+				45BF63E7269F32B6005CCB56 /* SignupViewController.swift in Sources */,
 				45BF63AD269F1F48005CCB56 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
