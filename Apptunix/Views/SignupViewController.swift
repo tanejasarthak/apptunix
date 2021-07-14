@@ -54,10 +54,11 @@ extension SignupViewController {
         let baseDataController = BaseDataController()
         let params = ["username": mobileNumberTextField.text!, "password": passwordTextField.text!]
        
-        baseDataController.dataRequest(method: .post, url: .signup, parameters: params, authHeaders: nil) {
-            token, success   in
+        baseDataController.dataRequest(url: .signup, httpMethod: .post, parameters: params, authHeaders: nil) {
+            data, success   in
+            guard let data = data else { return }
             if success {
-                AppDelegate.authToken = token
+                AppDelegate.authToken = data["token"] as? String ?? ""
                 self.showSuccessAlert()
             }
         } failure: { error in

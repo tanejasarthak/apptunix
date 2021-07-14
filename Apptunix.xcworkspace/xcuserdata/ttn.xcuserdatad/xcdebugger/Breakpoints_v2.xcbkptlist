@@ -3,4 +3,70 @@
    uuid = "B91B3B9C-8348-42AA-B214-EB9F2FD5A3FF"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E90AC5CB-89A7-466A-B590-0E69AA3E137F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Apptunix/Data Controller/BaseDataController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "dataRequest(url:httpMethod:parameters:authHeaders:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE909B51-02EE-4D92-9FA9-B25C4D990856"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Apptunix/Data Controller/BaseDataController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "dataRequest(url:httpMethod:parameters:authHeaders:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE909B51-02EE-4D92-9FA9-B25C4D990856 - bd37d02c1bf47555"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Apptunix.BaseDataController.dataRequest(method: Apptunix.RequestMethod, url: Swift.Optional&lt;Apptunix.EndPointUrl&gt;, httpMethod: Alamofire.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, authHeaders: Swift.Optional&lt;Swift.String&gt;, success: (Swift.String, Swift.Bool) -&gt; (), failure: (Swift.Optional&lt;Alamofire.AFError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Apptunix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ttn/Documents/SwiftPractice/Apptunix/Apptunix/Data%20Controller/BaseDataController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  uuid = "BE909B51-02EE-4D92-9FA9-B25C4D990856 - bd37d02c1bf47555"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in Apptunix.BaseDataController.dataRequest(method: Apptunix.RequestMethod, url: Swift.Optional&lt;Apptunix.EndPointUrl&gt;, httpMethod: Alamofire.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, authHeaders: Swift.Optional&lt;Swift.String&gt;, success: (Swift.String, Swift.Bool) -&gt; (), failure: (Swift.Optional&lt;Alamofire.AFError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Apptunix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ttn/Documents/SwiftPractice/Apptunix/Apptunix/Data%20Controller/BaseDataController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "506">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
