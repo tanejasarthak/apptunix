@@ -26,7 +26,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func signupTapped() {
-        
+        signupRequest()
     }
     
     @IBAction func loginTapped() {
@@ -45,5 +45,32 @@ class SignupViewController: UIViewController {
     
     @IBAction func showConfirmPasswordTapped() {
         showConfirmPasswordBtn.isSelected = !showConfirmPasswordBtn.isSelected
+    }
+}
+
+// MARK: - API Call
+extension SignupViewController {
+    func signupRequest() {
+        let baseDataController = BaseDataController()
+        let params = ["username": mobileNumberTextField.text!, "password": passwordTextField.text!]
+       
+        baseDataController.dataRequest(method: .post, url: .signup, parameters: params, authHeaders: nil) {
+            token, success   in
+            if success {
+                AppDelegate.authToken = token
+                self.showSuccessAlert()
+            }
+        } failure: { error in
+            debugPrint(error?.localizedDescription ?? "")
+        }
+    }
+    
+    func showSuccessAlert() {
+        let signupSuccessAlert = UIAlertController(title: Registration_Success, message: Login_Now, preferredStyle: .alert)
+        signupSuccessAlert.addAction(UIAlertAction(title: OK, style: .cancel, handler: { _ in
+            signupSuccessAlert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(signupSuccessAlert, animated: true, completion: nil)
     }
 }

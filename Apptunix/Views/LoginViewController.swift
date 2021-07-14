@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func loginTapped() {
-        
+        loginRequest()
     }
     
     @IBAction func signupTapped() {
@@ -39,5 +39,30 @@ class LoginViewController: UIViewController {
     
     @IBAction func skipTapped() {
         
+    }
+}
+
+// MARK: - API Call
+extension LoginViewController {
+    func loginRequest() {
+        let baseDataController = BaseDataController()
+        let params = ["username": mobileNumberTextField.text!, "password": passwordTextField.text!]
+        let authToken = AppDelegate.authToken
+        baseDataController.dataRequest(method: .post, url: .login, parameters: params, authHeaders: authToken) { auth, success in
+            if success == false {
+                self.showNoUserAlert()
+            }
+        } failure: { error in
+            debugPrint(error?.localizedDescription ?? "")
+        }
+    }
+    
+    func showNoUserAlert() {
+        let noUserFoundAlert = UIAlertController(title: No_User_Found, message: Try_Signup, preferredStyle: .alert)
+        noUserFoundAlert.addAction(UIAlertAction(title: OK, style: .cancel, handler: { _ in
+            noUserFoundAlert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(noUserFoundAlert, animated: true, completion: nil)
     }
 }

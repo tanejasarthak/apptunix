@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,12 @@
 		45BF63CD269F1F4A005CCB56 /* ApptunixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63CC269F1F4A005CCB56 /* ApptunixUITests.swift */; };
 		45BF63E2269F32A0005CCB56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63E1269F32A0005CCB56 /* LoginViewController.swift */; };
 		45BF63E7269F32B6005CCB56 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63E6269F32B6005CCB56 /* SignupViewController.swift */; };
+		45BF63F6269F4693005CCB56 /* BaseDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63F5269F4693005CCB56 /* BaseDataController.swift */; };
+		45BF6400269F46D7005CCB56 /* EndPointUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF63FF269F46D7005CCB56 /* EndPointUrl.swift */; };
+		45BF6405269F47A2005CCB56 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6404269F47A2005CCB56 /* LocalizedString.swift */; };
+		96C0C1E64FAA311B15985AEC /* Pods_ApptunixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7514862D0F93931AD8031988 /* Pods_ApptunixTests.framework */; };
+		9CFD377B26A79A5D76B147A7 /* Pods_Apptunix_ApptunixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1897E8DE83A4C059742BCE8B /* Pods_Apptunix_ApptunixUITests.framework */; };
+		E0700CD81086804EA0C4C265 /* Pods_Apptunix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6E4E40B8AFB5B6B5187515 /* Pods_Apptunix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1897E8DE83A4C059742BCE8B /* Pods_Apptunix_ApptunixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Apptunix_ApptunixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D21776F8A48B2EB154E444 /* Pods-Apptunix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apptunix.release.xcconfig"; path = "Target Support Files/Pods-Apptunix/Pods-Apptunix.release.xcconfig"; sourceTree = "<group>"; };
+		2DC0B5F436182D25D99E7D05 /* Pods-ApptunixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApptunixTests.release.xcconfig"; path = "Target Support Files/Pods-ApptunixTests/Pods-ApptunixTests.release.xcconfig"; sourceTree = "<group>"; };
 		45BF63A7269F1F48005CCB56 /* Apptunix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apptunix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BF63AA269F1F48005CCB56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45BF63AC269F1F48005CCB56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +60,15 @@
 		45BF63CE269F1F4A005CCB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45BF63E1269F32A0005CCB56 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		45BF63E6269F32B6005CCB56 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		45BF63F5269F4693005CCB56 /* BaseDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataController.swift; sourceTree = "<group>"; };
+		45BF63FF269F46D7005CCB56 /* EndPointUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointUrl.swift; sourceTree = "<group>"; };
+		45BF6404269F47A2005CCB56 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		750ADC205606291550849C6D /* Pods-Apptunix-ApptunixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apptunix-ApptunixUITests.release.xcconfig"; path = "Target Support Files/Pods-Apptunix-ApptunixUITests/Pods-Apptunix-ApptunixUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7514862D0F93931AD8031988 /* Pods_ApptunixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApptunixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814FB6BB6EEA9F45686681E5 /* Pods-ApptunixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApptunixTests.debug.xcconfig"; path = "Target Support Files/Pods-ApptunixTests/Pods-ApptunixTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5B8A60590695A9BFA5E2098 /* Pods-Apptunix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apptunix.debug.xcconfig"; path = "Target Support Files/Pods-Apptunix/Pods-Apptunix.debug.xcconfig"; sourceTree = "<group>"; };
+		D91DC85392E1FB81268D1469 /* Pods-Apptunix-ApptunixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apptunix-ApptunixUITests.debug.xcconfig"; path = "Target Support Files/Pods-Apptunix-ApptunixUITests/Pods-Apptunix-ApptunixUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC6E4E40B8AFB5B6B5187515 /* Pods_Apptunix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Apptunix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0700CD81086804EA0C4C265 /* Pods_Apptunix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C0C1E64FAA311B15985AEC /* Pods_ApptunixTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFD377B26A79A5D76B147A7 /* Pods_Apptunix_ApptunixUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36526424E382192B25CF25C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC6E4E40B8AFB5B6B5187515 /* Pods_Apptunix.framework */,
+				1897E8DE83A4C059742BCE8B /* Pods_Apptunix_ApptunixUITests.framework */,
+				7514862D0F93931AD8031988 /* Pods_ApptunixTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		45BF639E269F1F48005CCB56 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +116,8 @@
 				45BF63C0269F1F4A005CCB56 /* ApptunixTests */,
 				45BF63CB269F1F4A005CCB56 /* ApptunixUITests */,
 				45BF63A8269F1F48005CCB56 /* Products */,
+				F8B4CB94763F711799C2D38A /* Pods */,
+				36526424E382192B25CF25C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +134,8 @@
 		45BF63A9269F1F48005CCB56 /* Apptunix */ = {
 			isa = PBXGroup;
 			children = (
+				45BF63FE269F46C3005CCB56 /* Helper */,
+				45BF63FA269F469E005CCB56 /* Data Controller */,
 				45BF63E0269F328E005CCB56 /* Views */,
 				45BF63AA269F1F48005CCB56 /* AppDelegate.swift */,
 				45BF63AC269F1F48005CCB56 /* SceneDelegate.swift */,
@@ -139,6 +174,36 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		45BF63FA269F469E005CCB56 /* Data Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45BF63F5269F4693005CCB56 /* BaseDataController.swift */,
+			);
+			path = "Data Controller";
+			sourceTree = "<group>";
+		};
+		45BF63FE269F46C3005CCB56 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				45BF63FF269F46D7005CCB56 /* EndPointUrl.swift */,
+				45BF6404269F47A2005CCB56 /* LocalizedString.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F8B4CB94763F711799C2D38A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5B8A60590695A9BFA5E2098 /* Pods-Apptunix.debug.xcconfig */,
+				18D21776F8A48B2EB154E444 /* Pods-Apptunix.release.xcconfig */,
+				D91DC85392E1FB81268D1469 /* Pods-Apptunix-ApptunixUITests.debug.xcconfig */,
+				750ADC205606291550849C6D /* Pods-Apptunix-ApptunixUITests.release.xcconfig */,
+				814FB6BB6EEA9F45686681E5 /* Pods-ApptunixTests.debug.xcconfig */,
+				2DC0B5F436182D25D99E7D05 /* Pods-ApptunixTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45BF63D1269F1F4A005CCB56 /* Build configuration list for PBXNativeTarget "Apptunix" */;
 			buildPhases = (
+				DF5FCD903B02F15400806F6A /* [CP] Check Pods Manifest.lock */,
 				45BF63A3269F1F48005CCB56 /* Sources */,
 				45BF63A4269F1F48005CCB56 /* Frameworks */,
 				45BF63A5269F1F48005CCB56 /* Resources */,
+				B4AE45D1F5917F7B4DBF493D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45BF63D4269F1F4A005CCB56 /* Build configuration list for PBXNativeTarget "ApptunixTests" */;
 			buildPhases = (
+				79E6A9A418B56EC23C19BEEB /* [CP] Check Pods Manifest.lock */,
 				45BF63B9269F1F4A005CCB56 /* Sources */,
 				45BF63BA269F1F4A005CCB56 /* Frameworks */,
 				45BF63BB269F1F4A005CCB56 /* Resources */,
@@ -181,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45BF63D7269F1F4A005CCB56 /* Build configuration list for PBXNativeTarget "ApptunixUITests" */;
 			buildPhases = (
+				39D61D400D44ED9FEF20AD31 /* [CP] Check Pods Manifest.lock */,
 				45BF63C4269F1F4A005CCB56 /* Sources */,
 				45BF63C5269F1F4A005CCB56 /* Frameworks */,
 				45BF63C6269F1F4A005CCB56 /* Resources */,
+				D2CAF975E457A257FB6713BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +334,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39D61D400D44ED9FEF20AD31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Apptunix-ApptunixUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79E6A9A418B56EC23C19BEEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApptunixTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4AE45D1F5917F7B4DBF493D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Apptunix/Pods-Apptunix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Apptunix/Pods-Apptunix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Apptunix/Pods-Apptunix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2CAF975E457A257FB6713BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Apptunix-ApptunixUITests/Pods-Apptunix-ApptunixUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Apptunix-ApptunixUITests/Pods-Apptunix-ApptunixUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Apptunix-ApptunixUITests/Pods-Apptunix-ApptunixUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF5FCD903B02F15400806F6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Apptunix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		45BF63A3269F1F48005CCB56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,6 +445,9 @@
 				45BF63E2269F32A0005CCB56 /* LoginViewController.swift in Sources */,
 				45BF63AB269F1F48005CCB56 /* AppDelegate.swift in Sources */,
 				45BF63E7269F32B6005CCB56 /* SignupViewController.swift in Sources */,
+				45BF6405269F47A2005CCB56 /* LocalizedString.swift in Sources */,
+				45BF63F6269F4693005CCB56 /* BaseDataController.swift in Sources */,
+				45BF6400269F46D7005CCB56 /* EndPointUrl.swift in Sources */,
 				45BF63AD269F1F48005CCB56 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +621,7 @@
 		};
 		45BF63D2269F1F4A005CCB56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B8A60590695A9BFA5E2098 /* Pods-Apptunix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,6 +640,7 @@
 		};
 		45BF63D3269F1F4A005CCB56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18D21776F8A48B2EB154E444 /* Pods-Apptunix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -481,6 +659,7 @@
 		};
 		45BF63D5269F1F4A005CCB56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 814FB6BB6EEA9F45686681E5 /* Pods-ApptunixTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +681,7 @@
 		};
 		45BF63D6269F1F4A005CCB56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DC0B5F436182D25D99E7D05 /* Pods-ApptunixTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +703,7 @@
 		};
 		45BF63D8269F1F4A005CCB56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91DC85392E1FB81268D1469 /* Pods-Apptunix-ApptunixUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -542,6 +723,7 @@
 		};
 		45BF63D9269F1F4A005CCB56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 750ADC205606291550849C6D /* Pods-Apptunix-ApptunixUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
