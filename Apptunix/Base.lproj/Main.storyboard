@@ -56,34 +56,34 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj4-i4-AL8">
-                                <rect key="frame" x="30" y="416.5" width="354" height="30"/>
+                                <rect key="frame" x="30" y="421.5" width="354" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Logins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EC-hN-mc7">
-                                <rect key="frame" x="157" y="476.5" width="100.5" height="20.5"/>
+                                <rect key="frame" x="157" y="481.5" width="100.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYX-mF-5KB">
-                                <rect key="frame" x="277.5" y="486" width="116.5" height="2"/>
+                                <rect key="frame" x="277.5" y="491" width="116.5" height="2"/>
                                 <color key="backgroundColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="fT3-sP-rsN"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVr-bk-Y1X">
-                                <rect key="frame" x="20" y="486" width="125" height="2"/>
+                                <rect key="frame" x="20" y="491" width="125" height="2"/>
                                 <color key="backgroundColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="CUg-cy-7am"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fq6-Zg-lMR">
-                                <rect key="frame" x="149.5" y="527" width="115" height="25"/>
+                                <rect key="frame" x="149.5" y="532" width="115" height="25"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-oj-Jce">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -101,7 +101,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fg9-Ab-XWQ">
-                                <rect key="frame" x="90.5" y="582" width="233.5" height="30"/>
+                                <rect key="frame" x="90.5" y="587" width="233.5" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have a account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8E-WU-P3H">
                                         <rect key="frame" x="0.0" y="0.0" width="169.5" height="30"/>
@@ -164,7 +164,7 @@
                             <constraint firstItem="5eM-xZ-dfW" firstAttribute="top" secondItem="R9c-2A-py0" secondAttribute="bottom" constant="5" id="igV-yg-FMS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t0M-bS-lAP" secondAttribute="trailing" constant="15" id="kge-hD-ubE"/>
                             <constraint firstItem="fq6-Zg-lMR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l6T-sX-4ag"/>
-                            <constraint firstItem="bj4-i4-AL8" firstAttribute="top" secondItem="eIQ-oi-Aw9" secondAttribute="bottom" constant="45" id="oRz-hd-sDa"/>
+                            <constraint firstItem="bj4-i4-AL8" firstAttribute="top" secondItem="eIQ-oi-Aw9" secondAttribute="bottom" constant="50" id="oRz-hd-sDa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C5G-2y-khi" secondAttribute="trailing" constant="30" id="oTi-4h-vrD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lYX-mF-5KB" secondAttribute="trailing" constant="20" id="qPJ-or-xDS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="72K-eU-a2n" secondAttribute="trailing" constant="30" id="rOZ-73-7Y6"/>
