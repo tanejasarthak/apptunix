@@ -16,10 +16,14 @@ class CategoriesTableViewCell: UITableViewCell {
     // MARK: - IBOutlets
     @IBOutlet weak var expandBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var headingImageView: UIImageView!
+    @IBOutlet weak var headingLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     
     // Public Properties
     var delegate: CategoriesTableViewCellDelegate?
     var featuredVM = [FeaturedProductsViewModel]()
+    var categoryVM: CategoriesViewModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -59,16 +63,37 @@ class CategoriesTableViewCell: UITableViewCell {
             self.collectionView.reloadData()
         }
     }
+    
+    func configureCellForCategories(categoriesVM: CategoriesViewModel?) {
+        guard let categoryVM = categoriesVM else { return }
+        self.categoryVM = categoryVM
+     //   self.imageView?.image = UIImage(data: categoriesVM?.imageData ?? Data())
+        self.headingLabel.text = categoryVM.name
+        self.descLabel.text = categoryVM.deliveryBy
+        
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
 }
 
 extension CategoriesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return featuredVM.count
+    //    if tag == 0 {
+        //    return categoryVM.count
+            return categoryVM?.subCategoriesArr.count ?? 0
+//        }
+//        return featuredVM.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
-        cell.configureView(vm: featuredVM[indexPath.row])
+    //    if tag == 0 {
+          //  cell.configureCellForCategories(imageArr: self.categoryVM?.subCategoryImageData[indexPath.row], subCategory: self.categoryVM?.subCategoriesArr?[indexPath.row])
+            cell.configureCellForCategories(imageArr: self.categoryVM?.subCategoryImageData[indexPath.row], subCategory: self.categoryVM?.subCategoriesArr[indexPath.row])
+//        } else {
+//            cell.configureView(vm: featuredVM[indexPath.row])
+//        }
         return cell
     }
     

@@ -30,4 +30,10 @@ class ProductCollectionViewCell: UICollectionViewCell {
         descLabel.text = vm.description
         itemImageView.image = UIImage(data: vm.imageData ?? Data())
     }
+    
+    func configureCellForCategories(imageArr: Data?, subCategory: SubCategoryModel?) {
+        guard let subCategory = subCategory else { return }
+        itemImageView.image = UIImage(data: imageArr ?? Data())
+        headingLabel.text = subCategory.name
+    }
 }

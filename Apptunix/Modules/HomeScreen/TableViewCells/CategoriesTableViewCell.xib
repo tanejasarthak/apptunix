@@ -95,7 +95,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="dmY-wb-moD" id="htR-2E-8zK"/>
+                <outlet property="descLabel" destination="aeP-VO-cKe" id="0Xa-yE-GtZ"/>
                 <outlet property="expandBtn" destination="TSb-w3-1Ka" id="lXA-l2-0Hq"/>
+                <outlet property="headingImageView" destination="88b-8t-BMy" id="prp-8y-bEd"/>
+                <outlet property="headingLabel" destination="zez-gV-FpH" id="Nhw-7c-Qmk"/>
             </connections>
             <point key="canvasLocation" x="231.8840579710145" y="208.25892857142856"/>
         </tableViewCell>

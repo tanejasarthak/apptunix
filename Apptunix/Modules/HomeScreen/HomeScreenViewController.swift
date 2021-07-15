@@ -47,7 +47,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         if section == 0 {
             return 1
         } else {
-            return 3
+            return viewModel.categoriesVM?.count ?? 0
         }
     }
     
@@ -61,7 +61,12 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell", for: indexPath) as! CategoriesTableViewCell
         cell.delegate = self
-        cell.configureCell(featuredVM: viewModel.featuredProductsVM)
+        cell.tag = indexPath.row
+     //   if indexPath.row == 0 {
+            cell.configureCellForCategories(categoriesVM: viewModel.categoriesVM?[indexPath.row])
+//        } else {
+//            cell.configureCell(featuredVM: viewModel.featuredProductsVM)
+//        }
         return cell
     }
     
@@ -111,6 +116,15 @@ extension HomeScreenViewController {
             
         }
         
+        viewModel.fetchImageForCategories(with: HomeScreenDataController()) { success in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        } failure: { error in
+            
+        }
 
     }
 }

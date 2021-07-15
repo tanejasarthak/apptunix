@@ -88,6 +88,18 @@ extension HomeScreenViewModel {
                 successResponse(false)
             }
         }
+        
+        for record in categoryVM {
+            for subCatArr in record.subCategoriesArr {
+                API.fetchImages(imageEndPoint: subCatArr.image ?? "") { data, error in
+                    record.subCategoryImageData.append(data ?? Data())
+                  //  record.imageData = data
+                    successResponse(true)
+                } failure: { error in
+                    successResponse(false)
+                }
+            }
+        }
     }
 
 }

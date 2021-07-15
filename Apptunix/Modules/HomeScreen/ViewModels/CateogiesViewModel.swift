@@ -18,8 +18,12 @@ class CategoriesViewModel {
         return categoriesModel?.image ?? ""
     }
     
+    var deliveryBy: String {
+        return categoriesModel?.deliveryBy ?? ""
+    }
+    
     var imageData: Data?
-    var subCategoryImageData: Data?
+    var subCategoryImageData = [Data]()
     
     var subCategoriesArr: [SubCategoryModel] {
         return categoriesModel?.subCategoryData ?? [SubCategoryModel()]
