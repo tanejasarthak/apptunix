@@ -18,5 +18,5 @@ struct FeaturedProductsModel: Codable {
 }
 
 struct ProductImagesModel: Codable {
-    var image: [String]?
+    var image: String?
 }

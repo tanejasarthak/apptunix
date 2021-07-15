@@ -56,7 +56,7 @@ extension SignupViewController {
         let baseDataController = BaseDataController()
         let params = ["username": mobileNumberTextField.text!, "password": passwordTextField.text!]
        
-        baseDataController.dataRequest(url: .signup, httpMethod: .post, parameters: params, authHeaders: nil) {
+        baseDataController.dataRequest(url: .signup, httpMethod: .post, parameters: params, imageEndPoint: nil, authHeaders: nil) {
             data, success   in
             guard let data = data else { return }
             if success {

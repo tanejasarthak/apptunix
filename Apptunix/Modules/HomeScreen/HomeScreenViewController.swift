@@ -25,23 +25,43 @@ class HomeScreenViewController: UIViewController {
     
     func registerTableViewCells() {
         tableView.register(UINib.init(nibName: "CategoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoriesTableViewCell")
+        tableView.register(UINib.init(nibName: "FeaturedItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "FeaturedItemsTableViewCell")
     }
 }
 
 // MARK: - UITableView Delegate and Datasource
 extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 150
+        }
+        return UITableView.automaticDimension
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if section == 0 {
+            return 1
+        } else {
+            return 3
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FeaturedItemsTableViewCell", for: indexPath) as! FeaturedItemsTableViewCell
+            cell.configureCell(featuredVM: viewModel.topBannersVM)
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell", for: indexPath) as! CategoriesTableViewCell
         cell.delegate = self
+        cell.configureCell(featuredVM: viewModel.featuredProductsVM)
         return cell
     }
     
@@ -62,12 +82,24 @@ extension HomeScreenViewController {
     func fetchData() {
         viewModel.fetchHomeData(with: HomeScreenDataController(), successResponse: { success in
             if success {
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+                self.fetchImage()
             }
         }, failure: { error in
             
         })
+    }
+
+    func fetchImage() {
+        guard let topBannersVM = viewModel.topBannersVM else { return }
+        viewModel.fetchImage(with: HomeScreenDataController(), imageEndPoint: topBannersVM) { success in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        } failure: { error in
+            
+        }
+
     }
 }

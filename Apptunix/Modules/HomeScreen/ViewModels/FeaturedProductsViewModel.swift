@@ -30,6 +30,11 @@ class FeaturedProductsViewModel {
         return featuredProductsModel?.description ?? ""
     }
     
+    var image: String {
+        return ""
+       // return featuredProductsModel?.productImages?.image ?? ""
+    }
+    
     init(featuredProductsModel: FeaturedProductsModel) {
         self.featuredProductsModel = featuredProductsModel
     }

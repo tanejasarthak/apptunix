@@ -42,6 +42,19 @@ extension HomeScreenViewModel {
             
         }
     }
+    
+    func fetchImage(with API: APILists, imageEndPoint: [TopBannersViewModel], successResponse: @escaping (_ success: Bool) -> Void, failure: @escaping (_ error: NSError?) -> Void) {
+        
+        for record in imageEndPoint {
+            API.fetchImages(imageEndPoint: record.image) { data, error in
+                record.imageData = data
+                successResponse(true)
+            } failure: { error in
+                successResponse(false)
+            }
+        }
+
+    }
 }
 
 

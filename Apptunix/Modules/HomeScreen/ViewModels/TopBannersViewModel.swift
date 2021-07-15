@@ -14,6 +14,8 @@ class TopBannersViewModel {
         return topBannersModel?.image ?? ""
     }
     
+    var imageData: Data?
+    
     var name: String {
         return topBannersModel?.name ?? ""
     }

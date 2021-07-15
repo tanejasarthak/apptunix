@@ -24,4 +24,10 @@ class ProductCollectionViewCell: UICollectionViewCell {
         mainView.layer.cornerRadius = 15
         mainView.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
+    
+    func configureView(vm: FeaturedProductsViewModel) {
+        headingLabel.text = vm.name
+        descLabel.text = vm.description
+        itemImageView.image = UIImage(data: Data())
+    }
 }

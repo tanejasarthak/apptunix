@@ -9,8 +9,9 @@ import Foundation
 import Alamofire
 
 struct BaseDataController {
-    func dataRequest(url: EndPointUrl?, httpMethod: HTTPMethod , parameters: [String: Any]?, authHeaders: String?, success: @escaping (_ data: [String: Any]?,_ success: Bool) -> Void, failure: @escaping (_ error: AFError?) -> Void) {
+    func dataRequest(url: EndPointUrl?, httpMethod: HTTPMethod , parameters: [String: Any]?, imageEndPoint: String?, authHeaders: String?, success: @escaping (_ data: [String: Any]?,_ success: Bool) -> Void, failure: @escaping (_ error: AFError?) -> Void) {
         let completeURL = baseUrl + (url?.rawValue ?? "")
+        
         let httpHeaders: HTTPHeaders = [.authorization(authHeaders ?? "")]
         var successStatus = true
         debugPrint("url=", completeURL)
@@ -31,5 +32,18 @@ struct BaseDataController {
                        failure(error)
                 }
             }
+    }
+    
+    func imageDataRequest(url: EndPointUrl?, imageEndPoint: String, success: @escaping (_ data: Data?) -> Void, failure: @escaping (_ error: AFError?) -> Void) {
+        let completeURL = baseUrl + (url?.rawValue ?? "") + imageEndPoint
+        debugPrint(completeURL)
+        AF.request(completeURL).response { response in
+            switch response.result {
+                case .success(let value):
+                    success(value)
+                case .failure(let error):
+                    debugPrint(error)
+            }
+        }
     }
 }

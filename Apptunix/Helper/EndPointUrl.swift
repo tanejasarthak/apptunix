@@ -10,6 +10,7 @@ import Foundation
 enum EndPointUrl: String {
     case login = "login"
     case signup = "signup"
+    case fetchImage = "static"
     case home = ""
 }
 

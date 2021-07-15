@@ -50,7 +50,7 @@ extension LoginViewController {
         let baseDataController = BaseDataController()
         let params = ["username": mobileNumberTextField.text!, "password": passwordTextField.text!]
         let authToken = UserDefaults.value(forKey: "appToken") as! String
-        baseDataController.dataRequest(url: .login, httpMethod: .post, parameters: params, authHeaders: authToken) { data, success in
+        baseDataController.dataRequest(url: .login, httpMethod: .post, parameters: params, imageEndPoint: nil, authHeaders: authToken) { data, success in
             if success == false {
                 self.showNoUserAlert()
             }

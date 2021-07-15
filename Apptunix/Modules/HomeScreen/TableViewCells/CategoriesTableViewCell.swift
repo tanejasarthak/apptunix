@@ -19,6 +19,7 @@ class CategoriesTableViewCell: UITableViewCell {
     
     // Public Properties
     var delegate: CategoriesTableViewCellDelegate?
+    var featuredVM = [FeaturedProductsViewModel]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,18 +52,20 @@ class CategoriesTableViewCell: UITableViewCell {
         delegate?.expandTableViewCell(shouldExpand: expandBtn.isSelected)
     }
     
-    func configureCell() {
-        
+    func configureCell(featuredVM: [FeaturedProductsViewModel]?) {
+        guard let featuredVM = featuredVM else { return }
+        self.featuredVM = featuredVM
     }
 }
 
 extension CategoriesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return featuredVM.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
+        cell.configureView(vm: featuredVM[indexPath.row])
         return cell
     }
     
