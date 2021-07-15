@@ -34,6 +34,8 @@ class CategoriesTableViewCell: UITableViewCell {
         
         collectionView.isHidden = true
         expandBtn.isSelected = false
+        
+      //  headingImageView.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -67,7 +69,7 @@ class CategoriesTableViewCell: UITableViewCell {
     func configureCellForCategories(categoriesVM: CategoriesViewModel?) {
         guard let categoryVM = categoriesVM else { return }
         self.categoryVM = categoryVM
-     //   self.imageView?.image = UIImage(data: categoriesVM?.imageData ?? Data())
+        self.headingImageView.image = UIImage(data: categoriesVM?.imageData ?? Data())
         self.headingLabel.text = categoryVM.name
         self.descLabel.text = categoryVM.deliveryBy
         
