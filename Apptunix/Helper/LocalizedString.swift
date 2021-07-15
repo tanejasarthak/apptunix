@@ -15,3 +15,9 @@ let OK = "OK"
 
 let No_User_Found = "No User Found"
 let Try_Signup = "Please try signing up"
+let Oops = "Oops!"
+
+// Validation
+let Invalid_MobileNumber = "Enter a valid mobile number"
+let Invalid_Password = "Password should be atleast 6 digits"
+let Password_Mismatch = "Password Mismatch"

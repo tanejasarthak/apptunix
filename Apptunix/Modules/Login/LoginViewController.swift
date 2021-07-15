@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mobileNumberTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var viewModel = LoginViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,11 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func loginTapped() {
+        let result = viewModel.validateLoginDetails(mobileNumber: mobileNumberTextField.text ?? "", password: passwordTextField.text ?? "")
+        if !result.status {
+            showValidationAlert(message: result.message ?? "")
+            return
+        }
         loginRequest()
     }
     
@@ -66,5 +73,14 @@ extension LoginViewController {
         }))
         
         self.present(noUserFoundAlert, animated: true, completion: nil)
+    }
+    
+    func showValidationAlert(message: String) {
+        let validationAlert = UIAlertController(title: Oops, message: message, preferredStyle: .alert)
+        validationAlert.addAction(UIAlertAction(title: OK, style: .cancel, handler: { _ in
+            validationAlert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(validationAlert, animated: true, completion: nil)
     }
 }

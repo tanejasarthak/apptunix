@@ -16,6 +16,8 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var showPasswordBtn: UIButton!
     @IBOutlet weak var showConfirmPasswordBtn: UIButton!
     
+    var viewModel = SignupViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +28,12 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func signupTapped() {
+        let result = viewModel.validateSignup(mobileNumber: mobileNumberTextField.text ?? "", confirmPassword: confirmPasswordTextField.text ?? "", password: passwordTextField.text ?? "")
+        
+        if !result.status {
+            showValidationAlert(message: result.message ?? "")
+            return
+        }
         signupRequest()
     }
     
@@ -76,5 +84,14 @@ extension SignupViewController {
         }))
         
         self.present(signupSuccessAlert, animated: true, completion: nil)
+    }
+    
+    func showValidationAlert(message: String) {
+        let validationAlert = UIAlertController(title: Oops, message: message, preferredStyle: .alert)
+        validationAlert.addAction(UIAlertAction(title: OK, style: .cancel, handler: { _ in
+            validationAlert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(validationAlert, animated: true, completion: nil)
     }
 }

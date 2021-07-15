@@ -11,6 +11,7 @@ class HomeScreenViewModel {
     var topBannersVM: [TopBannersViewModel]?
     var recentlyViewedVM: [RecentlyViewedViewModel]?
     var featuredProductsVM: [FeaturedProductsViewModel]?
+    var categoriesVM: [CategoriesViewModel]?
 }
 
 // MARK: - API Call
@@ -33,6 +34,12 @@ extension HomeScreenViewModel {
             if let featuredProducts = data?.feturedProducts {
                 self.featuredProductsVM = featuredProducts.map {
                      FeaturedProductsViewModel(featuredProductsModel: $0)
+                }
+            }
+            
+            if let categories = data?.categories {
+                self.categoriesVM = categories.map {
+                    CategoriesViewModel(categoriesModel: $0)
                 }
             }
             
@@ -68,13 +75,20 @@ extension HomeScreenViewModel {
             }
         }
     }
+    
+    func fetchImageForCategories(with API: APILists, successResponse: @escaping (_ success: Bool) -> Void, failure: @escaping (_ error: NSError?) -> Void) {
+        guard let categoryVM = self.categoriesVM else { return }
+        
+        for record in categoryVM {
+            API.fetchImages(imageEndPoint: record.image) { data, error in
+                record.imageData = data
+              //  record.imageData = data
+                successResponse(true)
+            } failure: { error in
+                successResponse(false)
+            }
+        }
+    }
+
 }
-
-
-/*
- RecentlyViewedViewModel(recentlyViewedModel: data?.recentlyViewed)
- FeaturedProductsViewModel(featuredProductsModel: data?.feturedProducts)
- */
-
-
 

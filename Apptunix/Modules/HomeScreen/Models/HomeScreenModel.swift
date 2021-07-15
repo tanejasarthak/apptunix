@@ -11,5 +11,5 @@ struct HomeScreenModel: Codable {
     let topBanners: [TopBannersModel]?
     let recentlyViewed: [RecentlyViewedModel]?
     let feturedProducts: [FeaturedProductsModel]?
-//    let categories: String?
+    let categories: [CategoriesModel]?
 }
