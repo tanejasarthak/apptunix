@@ -14,7 +14,7 @@ struct FeaturedProductsModel: Codable {
     var price: Int?
     var description: String?
 //    var subCategory: SubCategoryModel?
-//    var productImages: ProductImagesModel?
+    var productImages: [ProductImagesModel]?
 }
 
 struct ProductImagesModel: Codable {

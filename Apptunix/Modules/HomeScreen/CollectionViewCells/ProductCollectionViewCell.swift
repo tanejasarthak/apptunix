@@ -28,6 +28,6 @@ class ProductCollectionViewCell: UICollectionViewCell {
     func configureView(vm: FeaturedProductsViewModel) {
         headingLabel.text = vm.name
         descLabel.text = vm.description
-        itemImageView.image = UIImage(data: Data())
+        itemImageView.image = UIImage(data: vm.imageData ?? Data())
     }
 }

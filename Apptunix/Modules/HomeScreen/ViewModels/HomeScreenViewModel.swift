@@ -43,9 +43,10 @@ extension HomeScreenViewModel {
         }
     }
     
-    func fetchImage(with API: APILists, imageEndPoint: [TopBannersViewModel], successResponse: @escaping (_ success: Bool) -> Void, failure: @escaping (_ error: NSError?) -> Void) {
+    func fetchImage(with API: APILists, successResponse: @escaping (_ success: Bool) -> Void, failure: @escaping (_ error: NSError?) -> Void) {
+        guard let topBannersVM = self.topBannersVM else { return }
         
-        for record in imageEndPoint {
+        for record in topBannersVM {
             API.fetchImages(imageEndPoint: record.image) { data, error in
                 record.imageData = data
                 successResponse(true)
@@ -53,7 +54,19 @@ extension HomeScreenViewModel {
                 successResponse(false)
             }
         }
-
+    }
+    
+    func fetchImageForFeatured(with API: APILists, successResponse: @escaping (_ success: Bool) -> Void, failure: @escaping (_ error: NSError?) -> Void) {
+        guard let featuredVM = self.featuredProductsVM else { return }
+        
+        for record in featuredVM {
+            API.fetchImages(imageEndPoint: record.image) { data, error in
+                record.imageData = data
+                successResponse(true)
+            } failure: { error in
+                successResponse(false)
+            }
+        }
     }
 }
 

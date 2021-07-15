@@ -55,6 +55,9 @@ class CategoriesTableViewCell: UITableViewCell {
     func configureCell(featuredVM: [FeaturedProductsViewModel]?) {
         guard let featuredVM = featuredVM else { return }
         self.featuredVM = featuredVM
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
 }
 

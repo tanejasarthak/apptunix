@@ -10,6 +10,8 @@ import Foundation
 class FeaturedProductsViewModel {
     var featuredProductsModel: FeaturedProductsModel?
     
+    var imageData: Data?
+    
     var name: String {
         return featuredProductsModel?.name ?? ""
     }
@@ -31,8 +33,7 @@ class FeaturedProductsViewModel {
     }
     
     var image: String {
-        return ""
-       // return featuredProductsModel?.productImages?.image ?? ""
+        return featuredProductsModel?.productImages?[0].image ?? ""
     }
     
     init(featuredProductsModel: FeaturedProductsModel) {

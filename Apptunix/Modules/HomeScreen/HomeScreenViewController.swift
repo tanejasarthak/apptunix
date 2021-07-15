@@ -90,8 +90,18 @@ extension HomeScreenViewController {
     }
 
     func fetchImage() {
-        guard let topBannersVM = viewModel.topBannersVM else { return }
-        viewModel.fetchImage(with: HomeScreenDataController(), imageEndPoint: topBannersVM) { success in
+ //       guard let topBannersVM = viewModel.topBannersVM else { return }
+        viewModel.fetchImage(with: HomeScreenDataController()) { success in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        } failure: { error in
+            
+        }
+        
+        viewModel.fetchImageForFeatured(with: HomeScreenDataController()) { success in
             if success {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
