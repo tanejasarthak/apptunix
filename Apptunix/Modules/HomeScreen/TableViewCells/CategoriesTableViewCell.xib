@@ -29,17 +29,17 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fruits &amp; Vegs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zez-gV-FpH">
                                 <rect key="frame" x="0.0" y="0.0" width="176" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.023529411764705882" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up to 50% off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeP-VO-cKe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up to 50% off" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeP-VO-cKe">
                                 <rect key="frame" x="0.0" y="27" width="176" height="17.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.73725490196078436" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will be delivered by 3 pm to 9 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw0-Of-D9v">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will be delivered by 3 pm to 9 pm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jw0-Of-D9v">
                                 <rect key="frame" x="0.0" y="54.5" width="176" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.0" green="0.023529411760000001" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,6 +84,7 @@
                     <constraint firstAttribute="trailing" secondItem="TSb-w3-1Ka" secondAttribute="trailing" constant="15" id="2ne-h5-TUl"/>
                     <constraint firstItem="DGa-Ta-vZg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="H6h-jg-nvx"/>
                     <constraint firstItem="88b-8t-BMy" firstAttribute="centerY" secondItem="DGa-Ta-vZg" secondAttribute="centerY" id="MG4-Hx-qFR"/>
+                    <constraint firstItem="TSb-w3-1Ka" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DGa-Ta-vZg" secondAttribute="trailing" constant="20" id="SrV-Wn-7ew"/>
                     <constraint firstItem="TSb-w3-1Ka" firstAttribute="centerY" secondItem="DGa-Ta-vZg" secondAttribute="centerY" id="Wd1-tK-hfE"/>
                     <constraint firstItem="Ljs-Pm-scz" firstAttribute="top" secondItem="DGa-Ta-vZg" secondAttribute="bottom" constant="50" id="YKM-UI-5zN"/>
                     <constraint firstItem="88b-8t-BMy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="fjc-am-2hZ"/>
