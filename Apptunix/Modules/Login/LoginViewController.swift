@@ -38,7 +38,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func skipTapped() {
-        
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let homeVC = story.instantiateViewController(withIdentifier: "HomeScreenViewController")
+        self.present(homeVC, animated: false, completion: nil)
     }
 }
 
@@ -47,7 +49,7 @@ extension LoginViewController {
     func loginRequest() {
         let baseDataController = BaseDataController()
         let params = ["username": mobileNumberTextField.text!, "password": passwordTextField.text!]
-        let authToken = AppDelegate.authToken
+        let authToken = UserDefaults.value(forKey: "appToken") as! String
         baseDataController.dataRequest(url: .login, httpMethod: .post, parameters: params, authHeaders: authToken) { data, success in
             if success == false {
                 self.showNoUserAlert()

@@ -36,7 +36,9 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func skipTapped() {
-        
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let homeVC = story.instantiateViewController(withIdentifier: "HomeScreenViewController")
+        self.present(homeVC, animated: false, completion: nil)
     }
     
     @IBAction func showPasswordTapped() {
@@ -58,7 +60,8 @@ extension SignupViewController {
             data, success   in
             guard let data = data else { return }
             if success {
-                AppDelegate.authToken = data["token"] as? String ?? ""
+              //  AppDelegate.authToken = data["token"] as? String ?? ""
+                UserDefaults.standard.setValue(data["token"] as? String ?? "", forKey: "appToken")
                 self.showSuccessAlert()
             }
         } failure: { error in
